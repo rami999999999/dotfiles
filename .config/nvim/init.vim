@@ -21,6 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gerw/vim-HiLinkTrace'
+Plug 'Yggdroot/indentLine'
 " Meta plugins
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/SyntaxRange'
