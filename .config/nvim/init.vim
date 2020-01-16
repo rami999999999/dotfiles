@@ -14,7 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Bundles
 " Actual plugins
 Plug 'ap/vim-buftabline'
-Plug 'VundleVim/Vundle.vim'
+"Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
@@ -48,6 +48,9 @@ Plug 'ziglang/zig.vim'
 
 " /Bundles
 
+
+
+
 call plug#end()
 
 filetype plugin indent on
@@ -58,6 +61,7 @@ set t_Co=256
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
 let g:jsx_ext_required = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 set encoding=utf-8
 set fileformat=unix
@@ -112,6 +116,10 @@ nnoremap cc :center<cr>
 inoremap <C-c> <ESC>
 " Ex mode is fucking dumb
 nnoremap Q <Nop>
+
+" ctrlp list buffers
+nnoremap <c-b> :CtrlPBuffer<CR>
+"nnoremap <c-b> :buffers<CR>:buffer<Space>
 
 command Jp e ++enc=euc-jp
 
@@ -204,4 +212,3 @@ nnoremap <tab> :bn<CR>
 nnoremap <s-tab> :bp<CR>
 nnoremap <leader>bd :bd<CR>
 
-nnoremap Q @@
