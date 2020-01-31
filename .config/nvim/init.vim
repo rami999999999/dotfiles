@@ -13,10 +13,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Bundles
 " Actual plugins
-Plug 'ap/vim-buftabline'
 "Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
@@ -45,11 +44,13 @@ Plug 'ziglang/zig.vim'
 
 " Added by PLR
 
+Plug 'ap/vim-buftabline'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
 
 " /Bundles
-
-
-
 
 call plug#end()
 
@@ -62,6 +63,14 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
 let g:jsx_ext_required = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+
+" Added by PLR
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+let g:fzf_tags_command = 'ctags -R'
+
+
+
 
 set encoding=utf-8
 set fileformat=unix
@@ -117,9 +126,16 @@ inoremap <C-c> <ESC>
 " Ex mode is fucking dumb
 nnoremap Q <Nop>
 
-" ctrlp list buffers
-nnoremap <c-b> :CtrlPBuffer<CR>
+" fzf list buffers
+nnoremap <leader>B :Buffers<CR>
 "nnoremap <c-b> :buffers<CR>:buffer<Space>
+
+" fzf tags
+nnoremap <leader>t :Tags<CR>
+
+" fzf files
+nnoremap <leader>f :Files<CR>
+
 
 command Jp e ++enc=euc-jp
 

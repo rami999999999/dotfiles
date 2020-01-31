@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/pedramos/code/autoperf/system_col/bin/fetch'
+let g:netrw_dirhist_2='/home/pedramos/code/autoperf/system_col/bin'
+let g:netrw_dirhist_1='/home/pedramos/code/autoperf/system_col'
+let g:netrw_dirhist_0='/home/pedramos/code/autoperf/apa'
+let g:netrw_dirhist_9='/home/pedramos/code/dtsim'
+let g:netrw_dirhist_8='/home/pedramos/code/autoperf/apa'
+let g:netrw_dirhist_7='/home/pedramos/code/dtsim-next/templates'
+let g:netrw_dirhist_6='/home/pedramos/.config/bspwm'
+let g:netrw_dirhist_5='/home/pedramos/code/dtsim-next/templates'
+let g:netrw_dirhist_4='/home/pedramos/.config'
