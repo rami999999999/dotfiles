@@ -136,6 +136,8 @@ nnoremap <leader>t :Tags<CR>
 " fzf files
 nnoremap <leader>f :Files<CR>
 
+" tagbar
+nmap <F8> :TagbarToggle<CR>
 
 command Jp e ++enc=euc-jp
 
