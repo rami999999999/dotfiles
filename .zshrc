@@ -127,3 +127,6 @@ export EDITOR=nvim
 export TERMINFO=~/.terminfo
 
 echo -e -n "\x1b[\x32 q"
+
+zmodload zsh/nearcolor
+zstyle :prompt:pure:prompt:success color white
