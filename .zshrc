@@ -129,4 +129,5 @@ export TERMINFO=~/.terminfo
 echo -e -n "\x1b[\x32 q"
 
 zmodload zsh/nearcolor
-zstyle :prompt:pure:prompt:success color white
+
+PURE_PROMPT_SYMBOL='%f%F{white}$%f %F{white}❯'
