@@ -130,4 +130,7 @@ echo -e -n "\x1b[\x32 q"
 
 zmodload zsh/nearcolor
 
-PURE_PROMPT_SYMBOL='%f%F{white}$%f %F{white}❯'
+#PURE_PROMPT_SYMBOL='%f%F{white}$%f %F{white}❯'
+
+
+

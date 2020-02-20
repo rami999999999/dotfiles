@@ -142,8 +142,8 @@ nmap <F8> :TagbarToggle<CR>
 command Jp e ++enc=euc-jp
 
 " Preferences for various file formats
-autocmd FileType c setlocal noet ts=4 sw=4 tw=80
-autocmd FileType h setlocal noet ts=4 sw=4 tw=80
+autocmd FileType c setlocal noet ts=8 sw=8 tw=80
+autocmd FileType h setlocal noet ts=8 sw=8 tw=80
 autocmd FileType cpp setlocal noet ts=4 sw=4 tw=80
 autocmd FileType s setlocal noet ts=4 sw=4
 autocmd FileType go setlocal noet ts=4 sw=4
@@ -168,9 +168,9 @@ autocmd FileType tex hi Error ctermbg=NONE
 autocmd FileType mail setlocal noautoindent
 autocmd FileType Jenkinsfile set ts=2 sw=2 noet
 augroup filetypedetect
-  autocmd BufRead,BufNewFile *mutt-*              setfiletype mail
+autocmd BufRead,BufNewFile *mutt-*              setfiletype mail
 augroup filetypedetect
-  autocmd BufRead,BufNewFile *qutebrowser-editor-* set ts=4 sw=4 et
+autocmd BufRead,BufNewFile *qutebrowser-editor-* set ts=4 sw=4 et
 autocmd BufNewFile,BufRead * if expand('%:t') == 'APKBUILD' | set ft=sh | endif
 autocmd BufNewFile,BufRead * if expand('%:t') == 'PKGBUILD' | set ft=sh | endif
 
@@ -183,7 +183,8 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,space:.
 
 syntax enable
-colorscheme ron
+colorscheme selenized 
+set bg=light
 highlight Search ctermbg=12
 highlight NonText ctermfg=darkgrey
 highlight SpecialKey ctermfg=darkgrey
