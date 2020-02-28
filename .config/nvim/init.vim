@@ -5,7 +5,6 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 
-
 set nocompatible
 filetype off
 
@@ -58,7 +57,7 @@ call plug#end()
 filetype plugin indent on
 
 set laststatus=2
-set t_Co=256
+"set t_Co=256
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
@@ -183,9 +182,13 @@ set guioptions-=e
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,space:.
 
+
+set termguicolors
+let g:gruvbox_contrast_light="medium"
 syntax enable
-colorscheme selenized 
+colorscheme gruvbox 
 set bg=light
+
 highlight Search ctermbg=12
 highlight NonText ctermfg=darkgrey
 highlight SpecialKey ctermfg=darkgrey
