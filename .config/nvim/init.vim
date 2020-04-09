@@ -183,12 +183,13 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,space:.
 
 
-set termguicolors
-let g:gruvbox_contrast_light="medium"
+"set termguicolors
 syntax enable
-colorscheme gruvbox 
+
+colorscheme peachpugg
 set bg=light
 
+highlight Visual ctermbg=black
 highlight Search ctermbg=12
 highlight NonText ctermfg=darkgrey
 highlight SpecialKey ctermfg=darkgrey

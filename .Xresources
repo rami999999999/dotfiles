@@ -12,18 +12,15 @@ Xft.lcdfilter: lcddefault
 !XTerm*foreground:        #d8d8d8
 !XTerm*pointerColor:      #1ABB9B
 
-XTerm.faceName:          mononoki
-XTerm*faceSize:          14
-XTerm*renderFont:		 true
-XTerm*selectToClipboard: true
-XTerm.termName: xterm-256color
 
-XTerm*eightBitInput:   false
-XTerm*eightBitOutput:  true
+xterm*renderFont:		 true
+xterm*selectToClipboard: true
+xterm.termName: xterm-256color
 
+xterm*eightBitInput:   false
+xterm*eightBitOutput:  true
 
-XTerm*utf8: 1
-
+xterm*utf8: 1
 
 !!! black dark/light
 !*color0:                          #222D31
