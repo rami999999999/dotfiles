@@ -1,0 +1,61 @@
+Create Both
+Expunge Both
+SyncState *
+
+
+IMAPAccount tecnico
+Host mail.tecnico.ulisboa.pt
+User ist165464
+PassCmd "pass mail/tecnico"
+SSLType IMAPS
+AuthMechs LOGIN
+
+
+IMAPStore tecnico-remote
+Account tecnico
+
+MaildirStore tecnico-local
+Path ~/Mail/mailbox/tecnico/
+Inbox ~/Mail/mailbox/tecnico/inbox
+
+
+Channel tecnico-inbox
+Master :tecnico-remote:
+Slave :tecnico-local:
+Create Slave
+Pattern "INBOX"
+
+Channel tecnico-sent
+Master :tecnico-remote:"Sent"
+Slave :tecnico-local:sent
+Create Slave
+
+Channel tecnico-trash
+Master :tecnico-remote:"Trash"
+Slave :tecnico-local:trash
+Create Slave
+MaxMessages 200
+ExpireUnread no
+
+Channel tecnico-dev
+Master :tecnico-remote:"Dev"
+Slave :tecnico-local:code
+Create Slave
+
+Channel tecnico-list
+Master :tecnico-remote:"List"
+Slave :tecnico-local:list
+Create Slave
+
+Channel tecnico-interest
+Master :tecnico-remote:"Interest"
+Slave :tecnico-local:interst
+Create Slave
+
+Group tecnico
+Channel tecnico-inbox
+Channel tecnico-sent
+Channel tecnico-trash
+Channel tecnico-dev
+Channel tecnico-list
+

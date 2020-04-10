@@ -1,0 +1,30 @@
+# vim: filetype=neomuttrc
+# muttrc file for account $title
+set realname = "Pedro L. Ramos"
+set from = "pedrolorgaramos@tecnico.ulisboa.pt"
+set sendmail = "msmtp -a tecnico"
+alias me Pedro L. Ramos <pedrolorgaramos@tecnico.ulisboa.pt>
+
+set sendmail = "/usr/local/bin/msmtp -a tecnico"
+
+set folder = "~/Mail/mailbox/tecnico"
+set spoolfile = "~/Mail/mailbox/tecnico/inbox"
+set header_cache = $HOME/.cache/mutt-wizard/tecnico/headers
+set message_cachedir = $HOME/.cache/mutt-wizard/tecnico/bodies
+set mbox_type = Maildir
+
+set trash='+trash'
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index,pager M noop
+bind index,pager C noop
+bind index gg first-entry
+macro index o "<shell-escape>mailsync -V tecnico<enter>" "run mbsync to sync tecnico"
+unmailboxes *
+
+mailboxes =sent =inbox =trash =code =list =interest
+virtual-mailboxes "unread" "notmuch://?query=tag:unread"
+
+
+
