@@ -9,7 +9,7 @@ User ist165464
 PassCmd "pass mail/tecnico"
 SSLType IMAPS
 AuthMechs LOGIN
-
+#Tunnel "nc -X connect -x 10.144.1.10:8080 mail.tecnico.ulisboa.pt 993 "
 
 IMAPStore tecnico-remote
 Account tecnico

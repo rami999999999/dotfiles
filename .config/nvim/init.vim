@@ -48,7 +48,8 @@ Plug 'ap/vim-buftabline'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'ludovicchabant/vim-gutentags'
 
 " /Bundles
 
@@ -212,6 +213,12 @@ highlight pythonConditional ctermfg=darkcyan
 highlight pythonBuiltin ctermfg=darkcyan
 highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=darkcyan ctermfg=black
+highlight shSingleQuote ctermfg=darkblue 
+highlight shHereDoc ctermfg=darkblue
+highlight shVariable ctermfg=black 
+highlight shCommandSub ctermfg=green
+highlight shStatement ctermfg=green
+highlight kshStatement ctermfg=green
 
 " Transparent editing of gpg encrypted files.
 " By Wouter Hanegraaff
